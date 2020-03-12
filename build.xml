@@ -1,4 +1,4 @@
-<project name="linear-data-structures" default="dist" basedir=".">
+<project name="java-ci-pipeline" default="dist" basedir=".">
 
 
 <description>
