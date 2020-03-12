@@ -7,8 +7,8 @@ class CalculatorTest {
 
     @Test
     void adding() {
-        double res = Calculator.adding(4, 50);
-        double esperado = 54;
+        double res = Calculator.adding(2, 50);
+        double esperado = 53;
         assertEquals(esperado, res);
 
 
