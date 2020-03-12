@@ -2,6 +2,7 @@ package calculator;
 
 
 public class Calculator{
+    int age = 10;
 
     public static double adding(int number, int number2){
         return number + number2;
