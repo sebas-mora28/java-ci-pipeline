@@ -10,7 +10,7 @@ language:
 
 script:
   - ant dist
-  - sonnar-scanner
+  - sonar-scanner
 
 
 
