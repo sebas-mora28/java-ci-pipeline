@@ -1,8 +1,17 @@
+addons:
+  sonarcloud:
+    organization: "sebas-mora28"
+    token:
+      secure: "lFv2kHIy6VpWShvh8qq3bZX7Lp+5xU5wY5Hk3jF/iibvszOpvfWgVaIXjlTR4P5SYBhsai6wkqybTgoF1rnJR8VyBqk+p3/VqHCtsFwkKF053h0u82SMLU9I0K4+Kv3cE3JBi9j9P6dw69UmGf9CGv1X3dq1gO6AQ7Gm0oX97kYYADxZ5dO88Ctsf39fr+rY//O8zDfKtl4+RSac7h4xd/a94ZzMMdKl4N0lWhlm/t7VamixS9YFr9Vd0hKy/MqvGXB/th1Ud9/Ma9crg8JuGD8+4B6/QstNz4akPX7toWgTvcu6BdFS1tIRAxB5VWdN1p6GGymFrlSx3WWsp9/1+VhvHiR0GIrXNc0lvV1OvrMCkNVTvTqx2drRYH/CgY6WvdyVySU3/te5Ut9lwXOsU4EB0Qcmx7HKx4+MEKGtQLauwtRFruV4FvWasN1hWW8kjVOelT+XNlztU+ZqeitS/SCg3t4/B8aDa36oE6Wxpmh2xcGPKT1oXiBbFG+g22MOk5T/s9yGcuJtGSWi0SQI6Aa5aUxHG5exdl7MsJlHpd6tiIoY+tgx5K2VrmRfnYByMqNEufauu/RsqAtRGHkWEEWJPR160XZqUfgSzqHbbopsFntVMdOAF4D33LghWSOaLe+zJBZqbo1tWEJNRjBXmagDLaKwMStS8RrFF2qJ+fc="
+
+
 language:
   java
 
 script:
   - ant dist
+  - sonnar-scanner
+
 
 
 
