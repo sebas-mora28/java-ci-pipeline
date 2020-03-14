@@ -8,6 +8,7 @@
     <property name="build" location="build"/>
     <property name="dist" location="dist"/>
     <property name="version" value="1.0"/>
+    <property name="junit-out" location="junit-out"/>
 
 
     <target name="init">
@@ -21,9 +22,31 @@
 
     <target name="dist" depends="compile" description="generate the distribution">
         <buildnumber/>
-        <mkdir dir="${dist}"/>
+        <mkdir dir
+
+                       ="${dist}"/>
         <jar destfile="${dist}/calculator-${version}.${build.number}.jar" basedir="${build}"/>
     </target>
+
+
+    <target name="test" depends="compile" description="run the unit tests">
+        <junitlauncher>
+            <classpath>
+                <pathelement location="bin"/>
+                <fileset dir="lib-test">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+            <testclasses outputdir="${junit-out}">
+                <fileset dir="${build}"/>
+                <listener type="legacy-brief" sendSysOut="true"/>
+                <listener type="legacy-xml" sendSysErr="true" sendSysOut="true"/>
+
+            </testclasses>
+        </junitlauncher>
+    </target>
+
+
 
     <target name="clean" description="clean up">
         <delete dir="${build}"/>
