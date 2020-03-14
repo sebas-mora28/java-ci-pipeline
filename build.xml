@@ -29,23 +29,6 @@
     </target>
 
 
-    <target name="test" depends="compile" description="run the unit tests">
-        <junitlauncher>
-            <classpath>
-                <pathelement location="bin"/>
-                <fileset dir="lib-test">
-                    <include name="**/*.jar"/>
-                </fileset>
-            </classpath>
-            <testclasses outputdir="${junit-out}">
-                <fileset dir="${build}"/>
-                <listener type="legacy-brief" sendSysOut="true"/>
-                <listener type="legacy-xml" sendSysErr="true" sendSysOut="true"/>
-
-            </testclasses>
-        </junitlauncher>
-    </target>
-
 
 
     <target name="clean" description="clean up">
