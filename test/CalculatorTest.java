@@ -1,6 +1,9 @@
 import calculator.Calculator;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
@@ -8,8 +11,21 @@ class CalculatorTest {
     @Test
     void adding() {
         double res = Calculator.adding(2, 50);
-        double esperado = 53;
-        assertEquals(esperado, res);
+
+        List<Integer> list = new ArrayList<Integer>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+
+
+        List<Integer> esperado = new ArrayList<Integer>();
+        esperado.add(4);
+        esperado.add(2);
+        esperado.add(1);
+        esperado.add(3);
+
+
 
 
     }
